@@ -10,9 +10,7 @@
     // student card status colors - later used in cards
     $present_color = "rgba(63, 240, 75, 0.8)";
     $absent_color = "rgba(240, 90, 63, 0.8)";
-?>
 
-<?php
     // check if any of the buttons are clicked
     $present = 1;
     $absent = 0;

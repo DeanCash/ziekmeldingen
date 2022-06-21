@@ -14,7 +14,7 @@
         @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Exo+2&display=swap');
 
-        #wrapper {
+        .wrapper {
             position: absolute;
             left: 50%;
             top: 40%;
@@ -22,7 +22,7 @@
             height: 20em;
             width: 32em;
         }
-        #title {
+        .title {
             position: relative;
             font-family: "Bebas Neue";
             font-size: 5em;
@@ -33,7 +33,7 @@
             text-align: center;
             transform: translate(-50%, -50%);
         }
-        #content {
+        .content {
             position: relative;
             font-size: 1.2em;
             font-weight: 600;
@@ -50,16 +50,16 @@
             border-bottom: 0.2em #333 solid;
             border-left: 0.2em #333 solid;
         }
-        #content p {
+        .content p {
             margin: 0;
             padding: 0;
         }
     </style>
 </head>
 <body>
-    <div id="wrapper">
-        <div id="title">Error 404</div>
-        <div id="content">
+    <div class="wrapper">
+        <div class="title">Error 404</div>
+        <div class="content">
             <p>This Page Doesn't Exist!<br><a href="index.php">Go Home</a></p>
         </div>
     </div>

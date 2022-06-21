@@ -16,8 +16,6 @@
     </nav>
 </header>
 
-
-
 <style>
     .mode-img {
         height: 3rem;

@@ -45,8 +45,6 @@
     
     echo "<div class='logoutmsg'><h3>Successfully Signed Out</h3><p>Redirecting...</p></div>";
 
-
-
     header("refresh:1;url=index.php");
     exit();
 ?>
