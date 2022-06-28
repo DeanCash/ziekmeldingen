@@ -19,7 +19,7 @@
     <link rel="icon" href="media/favicon.png">
     <title>Login - Ziekmeldingen</title>
 </head>
-<body>
+<body class="login-body">
     <div class="login-wrapper">
         <!-- The left Login form -->
         <div class="login-wrapper-half">
@@ -29,10 +29,10 @@
                 <input type="password" name="login-password" placeholder="Password" required>
                 <input type="submit" name="login-submit" value="Login">
             </form>
+            <!-- error message that will only be shown when no account matches login -->
             <div class="login-form-error-message" id="login-error-state">This account doesn't exist!</div>
         </div>
         <!-- The right Register form -->
-        <!--  -->
         <div class="login-wrapper-half">
             <h2>Register</h2>
             <form method="POST" class="login-wrapper-form">
@@ -40,6 +40,7 @@
                 <input type="password" name="register-password" placeholder="New Password" required>
                 <input type="submit" name="register-submit" value="Register">
             </form>
+            <!-- error message that will only be shown when account already exists -->
             <div class="login-form-error-message" id="register-error-state">Username already taken!</div>
         </div>
     </div>

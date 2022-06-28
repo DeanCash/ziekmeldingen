@@ -176,6 +176,14 @@ a {
     padding-block: 1em;
 }
 
+.login-body {
+    /* 
+        setting the height to 100vh so
+        the linear gradient doesn't bug
+    */
+    height: 100vh;
+}
+
 @media only screen and (max-width: 600px) {
     .login-wrapper {flex-direction: column;}
 }

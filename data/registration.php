@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <?php    
     require_once('assets/dblink.php');
     require_once('assets/functions.php');
@@ -33,7 +34,6 @@
     }
 ?>
 
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
