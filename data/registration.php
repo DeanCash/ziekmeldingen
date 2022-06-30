@@ -3,7 +3,7 @@
     require_once('assets/dblink.php');
     require_once('assets/functions.php');
 
-    // if not logged in with account, send back ti login page for safety
+    // if not logged in with account, send back to login page for safety
     if (!check_logged_in()) {
         header("location:login.php");
     }
