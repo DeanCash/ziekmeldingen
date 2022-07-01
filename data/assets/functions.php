@@ -10,6 +10,8 @@ function exec_and_return (string $query, PDO $pdoconn): array {
     $stm = $pdoconn->prepare($query);
     if ($stm->execute()) {
         return $stm->fetchAll(PDO::FETCH_OBJ);
+    } else {
+        throw new Exception("exec_and_return - executing statement went wrong!", 1);
     }
 }
 

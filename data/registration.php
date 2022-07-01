@@ -43,7 +43,7 @@
     <link rel="stylesheet" href="style/indexstyle.css">
     <title>Registration - Ziekmeldingen</title>
 </head>
-<body class="background">
+<body class="bg-color">
     <!-- include the navbar -->
     <?php require_once("assets/navbar.php"); ?>
 

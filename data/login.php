@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <?php    
     require_once('assets/dblink.php');
     require_once('assets/functions.php');
@@ -8,7 +9,6 @@
         header("location:registration.php");
     }
 ?>
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -92,6 +92,12 @@
         }
     ?>
 
-<script defer src="scripts/index.js"></script>
+<script defer>
+    console.log("Website Loaded!");
+
+    if ( window.history.replaceState ) {
+        window.history.replaceState( null, null, window.location.href );
+    }
+</script>
 </body>
 </html>

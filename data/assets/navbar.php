@@ -3,6 +3,7 @@
         <ul class="navbar-ul" id="nav">
             <a href="home.php"><li>Registration</li></a>
             <a href="students.php"><li>Students</li></a>
+            <a href="overview.php"><li>Overview</li></a>
             <?php
                 // if user logged in, add a log out option to the navbar
                 require_once("functions.php");

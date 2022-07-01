@@ -1,20 +1,39 @@
+const origGradient  = "linear-gradient(160deg, rgba(160,197,166,1) 15%, rgba(71,113,103,1) 85%)";
+const darkGradient  = "linear-gradient(160deg, rgb(55, 80, 95) 15%, rgb(54, 54, 73) 85%)";
+const backGrounds = document.querySelectorAll("body");
+
+backGrounds.forEach(e => {
+    e.style.background = window.localStorage.backgroundColor;
+})
+
+
+
+
+
 console.log("Website Loaded!");
 
 if ( window.history.replaceState ) {
     window.history.replaceState( null, null, window.location.href );
 }
 
-let toggle = true;
-const origGradient = "linear-gradient(160deg, rgba(160,197,166,1) 15%, rgba(71,113,103,1) 85%)";
-const darkGradient = "linear-gradient(160deg, rgb(55, 80, 95) 15%, rgb(54, 54, 73) 85%)";
-
+// button toggle function for the background color - saves the background color
+// in the local storage so it saves across all pages
 function toggleBgColor() {
-    let background = document.querySelector(".background");
-    if (toggle) {
-        background.style.background = darkGradient;
-        toggle = false;
+    if (window.localStorage.backgroundColor) {
+        backGrounds.forEach(e => {
+            if (window.localStorage.backgroundColor == darkGradient)
+            {
+                window.localStorage.backgroundColor = origGradient;
+            } else {
+                window.localStorage.backgroundColor = darkGradient;
+            }
+            e.style.background = window.localStorage.backgroundColor;
+        })
+
     } else {
-        background.style.background = origGradient;
-        toggle = true;
+        window.localStorage.backgroundColor = origGradient;
+        backGrounds.forEach(e => {
+            e.style.background = window.localStorage.backgroundColor;
+        })
     }
 }
