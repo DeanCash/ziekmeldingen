@@ -11,7 +11,7 @@
     $studentid = $_GET['studentid'];
 
     $student = exec_and_return("SELECT * FROM registration WHERE sid='$studentid'", $conn);
-    
+    $ispresent = $student[0]->present ? "Aanwezig" : "Afwezig";
 ?>
 <html lang="en">
 <head>
@@ -27,8 +27,38 @@
     <?php require_once("assets/navbar.php"); ?>
 
     <div class="studentpage-wrapper">
-        <div style='background: url($student->profilepicture); background-position: center; background-repeat: no-repeat; background-size: cover;' class='studentpage-img'></div>
+        <div class="studentpage-topinfo">
+            <div style='background: url(<?= $student[0]->profilepicture ?>); background-position: center; background-repeat: no-repeat; background-size: cover;' class='studentpage-img'></div>
+            <h2><?= $student[0]->name ?></h2>
+            <h3><?= $ispresent ?></h3>
+        </div>
+        <table class="studentpage-table">
+            <tr>
+                <th>Ziekdatum</th>
+                <th>Beterdatum</th>
+                <th>Reden</th>
+                <th>Bewerk</th>
+            </tr>
+            <?php
+                echo
+                "<form method='POST'>".
+                    "<tr>".
+                        "<td>1</td>".
+                        "<td>2</td>".
+                        "<td><input type='text' name='reden'></td>".
+                        "<td><input type='submit' value='bewerk' name='bewerkbtn'></td>".
+                    "</tr>".
+                "</form>";
+            ?>
+            </table>
     </div>
+
+    <?php
+        if(isset($_POST['bewerkbtn'])) {
+            $reden = $_POST['reden'];
+            debug_to_console("$reden", ERROR);
+        }
+    ?>
 
 <!-- light and dark background toggle script -->
 <script defer src="scripts/index.js"></script>

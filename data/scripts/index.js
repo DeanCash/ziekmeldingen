@@ -20,13 +20,10 @@ if ( window.history.replaceState ) {
 // in the local storage so it saves across all pages
 function toggleBgColor() {
     if (window.localStorage.backgroundColor) {
-        backGrounds.forEach(e => {
-            if (window.localStorage.backgroundColor == darkGradient)
-            {
-                window.localStorage.backgroundColor = origGradient;
-            } else {
-                window.localStorage.backgroundColor = darkGradient;
-            }
+        backGrounds.forEach(e =>
+        {
+            var isDark = window.localStorage.backgroundColor == darkGradient;
+            window.localStorage.backgroundColor = isDark ? origGradient : darkGradient;
             e.style.background = window.localStorage.backgroundColor;
         })
 
