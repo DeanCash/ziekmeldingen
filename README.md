@@ -1,2 +1,3 @@
 # ziekmeldingen
- php website voor ziekmeldingen project
+project voor ziekmeldingen applicatie
+geschreven in PHP
