@@ -1,4 +1,4 @@
 # ziekmeldingen
-##### (Old college project)
+#### (Old college project)
 project voor ziekmeldingen applicatie
 geschreven in PHP
