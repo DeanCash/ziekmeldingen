@@ -6,10 +6,6 @@ backGrounds.forEach(e => {
     e.style.background = window.localStorage.backgroundColor;
 })
 
-
-
-
-
 console.log("Website Loaded!");
 
 if ( window.history.replaceState ) {
