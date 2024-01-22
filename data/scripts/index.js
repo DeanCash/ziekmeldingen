@@ -1,5 +1,5 @@
-const origGradient  = "linear-gradient(160deg, rgba(160,197,166,1) 15%, rgba(71,113,103,1) 85%)";
-const darkGradient  = "linear-gradient(160deg, rgb(55, 80, 95) 15%, rgb(54, 54, 73) 85%)";
+const origGradient  = "linear-gradient(90deg, rgba(160,197,166,1) 15%, rgba(71,113,103,1) 85%)";
+const darkGradient  = "linear-gradient(90deg, rgb(55, 80, 95) 15%, rgb(54, 54, 73) 85%)";
 const backGrounds = document.querySelectorAll("body");
 
 backGrounds.forEach(e => {
